@@ -4,24 +4,14 @@ import { api } from '../../../services/api';
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { formRegisterSchema } from './formRegisterSchema';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
-
-interface iDefaultErrorApi{
-  error: string
-}
-
-interface iFormRegister{
-  name: string
-  email: string
-  password: string
-  passwordConfirm?: string
-}
+import { iFormRegister, iDefaultErrorApi } from './types';
 
 export const FormRegister = () => {
-
-  const [dataRegister, setDataRegister] = useState({} as iFormRegister)
+  const navigate = useNavigate()
+/*   const [dataRegister, setDataRegister] = useState({} as iFormRegister) */
 
   const { register, handleSubmit, formState: { errors } } = useForm<iFormRegister>({
     mode: "onBlur",
@@ -32,30 +22,29 @@ export const FormRegister = () => {
 
     const { name, email, password } = data;
     const newData = { name, email, password };
-    setDataRegister(newData)
+/*     setDataRegister(newData) */
 
-  }
-     useEffect(() => {
-
-      (async()=>{
-        if(dataRegister.password){
-
-          try {
-              
-            await api.post("users", dataRegister);
-
-            toast.error("Cadastro realizado!")
-            /* 
-              redirecionar usuario para login
-            */
-          } catch (error) {
-            const defaultError = error as AxiosError<iDefaultErrorApi>
-            console.log(defaultError.response?.data)
-            toast.error("Este email já foi cadastrado.")
-          }
+    (async()=>{
+      if(newData.password){
+  
+        try {
+            
+          await api.post("users", newData);
+  
+          toast.success("Cadastro realizado!")
+          navigate("/login")
+  
+        } catch (error) {
+          const defaultError = error as AxiosError<iDefaultErrorApi>
+          console.log(defaultError.response?.data)
+          toast.error("Este email já foi cadastrado.")
         }
-      })(); 
-     }, [dataRegister]) 
+      }
+    })(); 
+  }
+
+
+
    
   return (
     <>

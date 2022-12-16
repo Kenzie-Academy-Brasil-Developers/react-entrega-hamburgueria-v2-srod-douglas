@@ -1,11 +1,9 @@
-import React from 'react';
-import { LoginPage } from './pages/Login';
-import { RegisterPage } from './pages/Register';
+import { AllRoutes } from './routes';
 
 function App() {
   return (
     <>
-      <LoginPage/>
+      <AllRoutes/>
     </>
   );
 }
