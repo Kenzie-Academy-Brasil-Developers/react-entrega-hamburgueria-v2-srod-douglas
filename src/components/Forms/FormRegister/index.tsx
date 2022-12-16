@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { formRegisterSchema } from './formRegisterSchema';
 import { Link } from 'react-router-dom';
 import { AxiosError } from 'axios';
+import { toast } from 'react-toastify';
 
 interface iDefaultErrorApi{
   error: string
@@ -33,31 +34,29 @@ export const FormRegister = () => {
     const newData = { name, email, password };
     setDataRegister(newData)
 
-    console.log(dataRegister)
   }
      useEffect(() => {
 
       (async()=>{
         if(dataRegister.password){
 
-        
           try {
               
-            const response = await api.post("users", dataRegister);
-            console.log(response)
+            await api.post("users", dataRegister);
+
+            toast.error("Cadastro realizado!")
             /* 
-              Adicionar toast de sucesso
               redirecionar usuario para login
             */
           } catch (error) {
             const defaultError = error as AxiosError<iDefaultErrorApi>
-            console.log(defaultError)
+            console.log(defaultError.response?.data)
+            toast.error("Este email já foi cadastrado.")
           }
         }
       })(); 
-     }, []) 
+     }, [dataRegister]) 
    
-
   return (
     <>
       <div>
@@ -83,7 +82,9 @@ export const FormRegister = () => {
 
         <input id="passwordConfirm" placeholder='Confirmar Senha' type="password" {...register("passwordConfirm")} />
         {errors.passwordConfirm && <p>{errors.passwordConfirm.message}</p>}
+
         <button type="submit">Cadastrar</button>
+        
       </form>
     </>
   )
