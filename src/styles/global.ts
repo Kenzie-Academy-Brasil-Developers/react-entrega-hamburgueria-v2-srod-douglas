@@ -1,4 +1,6 @@
-import { CreateGlobalStyles } from 'styled-components'
+export {}
+
+/* import { CreateGlobalStyles } from 'styled-components'
 
 const GlobalStyle = CreateGlobalStyles`
     *{
@@ -9,4 +11,4 @@ const GlobalStyle = CreateGlobalStyles`
         list-style: none;
         text-decoration: none;
     }
-`
+` */
