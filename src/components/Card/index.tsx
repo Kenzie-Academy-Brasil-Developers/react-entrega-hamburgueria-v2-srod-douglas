@@ -1,8 +1,5 @@
-import React from 'react'
 import { idataProducts } from '../../contexts/Dashboard/types'
 import { iCardProps } from './types'
-
-
 
 export const Card = ({ products }: iCardProps) => {
   return (

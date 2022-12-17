@@ -6,9 +6,12 @@ import { formLoginSchema } from "./FormLoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { iFormLogin, iDefaultErrorApi } from "./types";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { DashboardContext } from "../../../contexts/Dashboard";
 
 export const FormLogin = () => {
     const navigate = useNavigate()
+    const { setToken } = useContext(DashboardContext)
 
     const { register, handleSubmit, formState: { errors } } = useForm<iFormLogin>({
         mode: "onBlur",
@@ -24,6 +27,7 @@ export const FormLogin = () => {
                 console.log(res.data.accessToken)
                 window.localStorage.setItem("@TK_US:", res.data.accessToken)
                 console.log(res.data.user)
+                setToken(res.data.accessToken)
                 toast.success("Login efetuado!")
                 navigate("/dashboard")
 
