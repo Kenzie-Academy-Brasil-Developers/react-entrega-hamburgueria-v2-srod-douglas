@@ -4,12 +4,11 @@ import {
   iDashboardContextValues,
   iDashboardProviderProps,
   idataProducts,
+  iSearchProduct,
+  iToken,
 } from "./types";
 
-interface iToken {
-  setToken: React.Dispatch<SetStateAction<string>>;
-  token: string | null;
-}
+
 
 export const DashboardContext = createContext({} as iDashboardContextValues);
 
@@ -17,7 +16,8 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
 
   const [dataProducts, setDataProducts] = useState([] as idataProducts[]);
   const [token, setToken] = useState<iToken | any>(null);
-  console.log("carregou meu componente dashboardProvider");
+  const [search, setSearch] = useState<iSearchProduct | any>()
+
 
   const getProducts = async () => {
     if (token !== null) {
@@ -27,7 +27,9 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
             Authorization: `Bearer ${token}`,
           },
         });
+
         setDataProducts(res.data);
+
       } catch (error) {
         console.log(error);
       }
@@ -35,12 +37,11 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
   };
 
   useEffect(() => {
-    console.log("useEffect foi chamado");
     getProducts()
   }, [token]);
 
   return (
-    <DashboardContext.Provider value={{ getProducts, dataProducts, setToken }}>
+    <DashboardContext.Provider value={{ getProducts, dataProducts, setToken, setSearch, search }}>
       {children}
     </DashboardContext.Provider>
   );

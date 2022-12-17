@@ -5,9 +5,11 @@ export interface iDashboardProviderProps{
 }
 
 export interface iDashboardContextValues{
-    getProducts: () => void;
     dataProducts: idataProducts[];
+    getProducts: () => void;
     setToken: React.Dispatch<SetStateAction<string>>;
+    search: iSearchProduct;
+    setSearch: React.Dispatch<SetStateAction<string>>;
 }
 
 export interface idataProducts{
@@ -16,4 +18,15 @@ export interface idataProducts{
     img: string;
     name: string
     price: number;
+}
+
+export interface iToken {
+    setToken: React.Dispatch<SetStateAction<string>>;
+    token: string | null;
+}
+  
+export interface iSearchProduct{
+    search: string | any;
+    setSearch: React.Dispatch<SetStateAction<string>>;
+    toLocaleLowerCase(): string;
 }
