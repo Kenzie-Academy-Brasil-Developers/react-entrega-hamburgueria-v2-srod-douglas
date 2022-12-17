@@ -10,6 +10,8 @@ export interface iDashboardContextValues{
     setToken: React.Dispatch<SetStateAction<string>>;
     search: iSearchProduct;
     setSearch: React.Dispatch<SetStateAction<string>>;
+    cart: idataProducts[];
+    setCart: React.Dispatch<SetStateAction<idataProducts[]>>
 }
 
 export interface idataProducts{
