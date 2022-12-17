@@ -17,7 +17,7 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
   const [dataProducts, setDataProducts] = useState([] as idataProducts[]);
   const [token, setToken] = useState<iToken | any>(null);
   const [search, setSearch] = useState<iSearchProduct | any>()
-
+  const [cart, setCart] = useState([] as idataProducts[])
 
   const getProducts = async () => {
     if (token !== null) {
@@ -41,7 +41,7 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
   }, [token]);
 
   return (
-    <DashboardContext.Provider value={{ getProducts, dataProducts, setToken, setSearch, search }}>
+    <DashboardContext.Provider value={{ getProducts, dataProducts, setToken, setSearch, search, cart, setCart }}>
       {children}
     </DashboardContext.Provider>
   );
