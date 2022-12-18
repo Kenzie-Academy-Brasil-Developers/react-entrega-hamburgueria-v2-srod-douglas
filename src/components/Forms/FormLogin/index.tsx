@@ -22,11 +22,7 @@ export const FormLogin = () => {
         (async()=>{
             try {
                 const res = await api.post("login", data);
-                console.log(res)
-                console.log(res.data)
-                console.log(res.data.accessToken)
                 window.localStorage.setItem("@TK_US:", res.data.accessToken)
-                console.log(res.data.user)
                 setToken(res.data.accessToken)
                 toast.success("Login efetuado!")
                 navigate("/dashboard")

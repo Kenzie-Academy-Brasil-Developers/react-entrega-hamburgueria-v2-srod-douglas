@@ -6,12 +6,20 @@ export interface iDashboardProviderProps{
 
 export interface iDashboardContextValues{
     dataProducts: idataProducts[];
-    getProducts: () => void;
-    setToken: React.Dispatch<SetStateAction<string>>;
+    token: string | null;
+    setToken: React.Dispatch<SetStateAction<string | null>>;
     search: iSearchProduct;
     setSearch: React.Dispatch<SetStateAction<string>>;
     cart: idataProducts[];
-    setCart: React.Dispatch<SetStateAction<idataProducts[]>>
+    setCart: React.Dispatch<SetStateAction<idataProducts[]>>;
+    modal: boolean;
+    setModal: React.Dispatch<SetStateAction<boolean>>;
+    numberItems: number;
+    setNumberItems: React.Dispatch<SetStateAction<number>>;
+    cartToRender: idataProducts[];
+    setCartToRender: React.Dispatch<SetStateAction<idataProducts[]>>;
+    addToCart: (product: idataProducts) => void;
+    totalCart: string;
 }
 
 export interface idataProducts{

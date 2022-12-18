@@ -5,7 +5,7 @@ import { Card } from "../Card"
 
 export const ListCards = () => {
 
-    const { search, dataProducts } = useContext(DashboardContext)
+    const { search, dataProducts} = useContext(DashboardContext)
     const [searchedProducts, setSearchedProducts] = useState([] as idataProducts[])
 
     useEffect(() => {

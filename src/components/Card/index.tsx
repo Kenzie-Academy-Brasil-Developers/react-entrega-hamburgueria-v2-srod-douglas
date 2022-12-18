@@ -1,19 +1,10 @@
-import { useContext, useState } from 'react'
-import { toast } from 'react-toastify'
+import { useContext } from 'react'
 import { DashboardContext } from '../../contexts/Dashboard'
 import { idataProducts } from '../../contexts/Dashboard/types'
 import { iCardProps } from './types'
 
 export const Card = ({ products }: iCardProps) => {
-  const { cart, setCart } = useContext(DashboardContext)
-
-  const addToCart = (product: idataProducts) => {
-    const newCart = [...cart, product]
-
-    setCart(newCart)
-    toast.success(`${product.name} foi adicionado ao carrinho!`)
-    console.log(newCart)
-  }
+  const { cart, addToCart } = useContext(DashboardContext)
 
   return(
     <>
