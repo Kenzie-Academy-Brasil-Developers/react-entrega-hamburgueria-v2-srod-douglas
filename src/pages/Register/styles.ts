@@ -6,9 +6,11 @@ export const StyledMainRegisterPage = styled.main`
     justify-content: space-around;
     align-items: center;
 
-    min-width: 300px;
-    width: 1200px;
+    max-width: 1200px;
     height: 100%;
+    gap: 2rem;
+
+    padding: 0 2rem;
 
     margin: 0 auto;
 
@@ -16,8 +18,17 @@ export const StyledMainRegisterPage = styled.main`
         border-radius: 20px;
     }
 
+    img:nth-child(1){
+        display: block;
+        max-width: 100%;
+    }
+
+    img:nth-child(2){
+        display: none;
+    }
+
     section:nth-child(1){
-        height: 500px;
+        max-height: 500px;
         box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 15px 0px;
         border-radius: 20px;
     }
@@ -44,6 +55,24 @@ export const StyledMainRegisterPage = styled.main`
     a:hover{
         transition: .5s;
         letter-spacing: .2rem;
+    }
+
+    @media(max-width: 768px){
+
+        width: 100%;
+        max-width: 680px;
+        padding: 0 1rem;
+        flex-direction: column;
+
+        img:nth-child(1){
+            display: none;
+        }
+
+        img:nth-child(2){
+            display: block;
+            margin-bottom: -4rem;
+            padding: 0 1rem;
+        }
     }
 }
 `
