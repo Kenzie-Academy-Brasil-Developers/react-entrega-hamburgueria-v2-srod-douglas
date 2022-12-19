@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { DashboardContext } from "../../contexts/Dashboard"
 import { idataProducts } from "../../contexts/Dashboard/types"
 import { Card } from "../Card"
+import { StyledList } from "./style"
 
 export const ListCards = () => {
 
@@ -18,11 +19,11 @@ export const ListCards = () => {
 
     if(searchedProducts.length === 0){
         return(
-            <ul>
+            <StyledList>
                 {
                     <Card products={dataProducts} />
                 }
-            </ul>
+            </StyledList>
         )
     }else{
         return(

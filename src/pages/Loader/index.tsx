@@ -13,7 +13,7 @@ export const LoaderDash = () => {
     return(
         <Container>
             <PacmanLoader 
-                color="##f9b209 "
+                color="##f9b209"
                 size="150px"
             />
         </Container>
