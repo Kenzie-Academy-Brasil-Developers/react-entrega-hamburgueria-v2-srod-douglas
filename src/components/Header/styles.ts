@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
 
     margin: 0 auto;
 
+
     background-color: var(--color-secundary);
 
     div:nth-child(1){
@@ -17,7 +18,7 @@ export const StyledHeader = styled.header`
     }
 
     div:nth-child(1) > img {
-        max-width: 350px;
+        max-width: 300px;
         margin-top: .7rem;
     }
 
@@ -26,9 +27,11 @@ export const StyledHeader = styled.header`
         align-items: center;
         justify-content: center;
         
-        gap: 1rem;
         height: 60px;
         width: 200px;
+        
+        margin-right: 2.8rem;
+        gap: 1rem;
         
         cursor: pointer;
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import "react-toastify/dist/ReactToastify.css";
-import Fade from 'react-awesome-reveal'
+
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -31,9 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         --weight-regular: 400;
         --weight-semibold: 600;
         --weight-bold: 700;
-
     }
-
 
     *{
         font-family: "Inter", sans-serif;
@@ -45,22 +43,22 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
 
         cursor: default;
-
     }
+
     #root{
         height: 100vh;
         width: 100%;
     }
+
     body{
         width: 100%;
         height: 100%;
-        background-image: url('/backgroundwhite.png');
+        background-image: url('/backgrounddark.png');
     }
+
     a{
         text-decoration: none;
-
         color: var(--color-grey-1);
-
         cursor: pointer;
         transition: .5s;
     }

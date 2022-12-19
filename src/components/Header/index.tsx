@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import { DashboardContext } from "../../contexts/Dashboard"
 import { IoCart } from 'react-icons/io5'
 import { MdLogout, MdRemoveShoppingCart } from 'react-icons/md'
@@ -6,7 +6,7 @@ import { Modal } from "../Modal"
 import { CartContext } from "../../contexts/CartContext"
 import { UserContext } from "../../contexts/User"
 import { Link } from "react-router-dom"
-import brandLogo from '../../assets/images/CODEburguerheadernotback.png'
+import brandLogo from '../../assets/images/brandCodeLogoCrop.png'
 import { StyledHeader } from "./styles"
 import { BsSearch } from 'react-icons/bs'
 
