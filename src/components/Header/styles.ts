@@ -5,7 +5,9 @@ export const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-around;
 
-    height: 80px;
+    box-sizing: border-box;
+
+    min-height: 80px;
     width: 100%;
 
     margin: 0 auto;
@@ -18,6 +20,7 @@ export const StyledHeader = styled.header`
 
     div:nth-child(1) > img {
         max-width: 300px;
+        min-width: 100px;
         margin-top: .7rem;
     }
 
@@ -27,10 +30,10 @@ export const StyledHeader = styled.header`
         justify-content: center;
         
         height: 60px;
-        width: 200px;
+        min-width: 50%;
         
-        margin-right: 2.8rem;
-        gap: 1rem;
+/*         margin-right: 2.8rem; */
+/*         gap: 1rem; */
         
         cursor: pointer;
 
@@ -49,12 +52,11 @@ export const StyledHeader = styled.header`
     }
     
     form{
-        margin-right: 1.5rem;
+        width: 365px;
     }
 
     input{
-        width: 365px;
-        max-width: 365px;
+        max-width: 350px;
         height: 60px;
 
         background-color: var(--color-grey-0);
@@ -96,5 +98,46 @@ export const StyledHeader = styled.header`
 
     img, div{
         cursor: pointer;
+    }
+
+    @media(max-width: 767px){
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px;
+
+        form{
+            width: 50%;
+        }
+        input{
+            width: 100%;
+        }
+
+        div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            >img{
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        div:nth-child(2){
+            width: 100%;
+            padding: 0 1rem;
+            display: inline;
+
+            >div{
+                padding: 0;
+                margin: 0;
+/*                 width: min-content; */
+            }
+        }
+        span{
+            margin: 0;
+        }
     }
 `

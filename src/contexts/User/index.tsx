@@ -21,17 +21,17 @@ export const UserProvider = ({ children }: iUserProviderProps) => {
         (async()=>{
             try {
                 const res = await api.post("login", data);
+                setLoading(true)
                 window.localStorage.setItem("@TK_US:", res.data.accessToken)
                 window.localStorage.setItem("@ID_US:", res.data.user.id)
                 setUser(true)
                 setUserPersist(true)
-                setLoading(true)
 
                 setTimeout(() => {
                     toast.success("Login efetuado!")
                     navigate('/dashboard')
                     setLoading(false)
-                }, (3000));
+                }, (4000));
             } catch (error) {
                 const defaultError = error as AxiosError<iDefaultErrorApi>
                 console.log(defaultError.response?.data)
@@ -69,7 +69,7 @@ export const UserProvider = ({ children }: iUserProviderProps) => {
         setTimeout(() => {
             navigate('/login')
             setLoading(false)
-        }, (3000));
+        }, (4000));
     }
 
     if(loading){

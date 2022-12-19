@@ -54,6 +54,9 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
         background-image: url('/backgrounddark.png');
+        background-repeat: repeat;
+        background-size: auto;
+        background-attachment:scroll;
     }
 
     a{

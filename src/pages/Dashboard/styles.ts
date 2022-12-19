@@ -91,4 +91,27 @@ export const StyledMainDashboard = styled.main`
     h2{
         color: var(--color-grey-600);
     }
+
+    @media(max-width: 767px){
+        main{
+            min-width: 100%;
+        }
+        section{
+            margin-top: 4rem;
+            min-width: 100%;
+        }
+
+        ul{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            height: 450px;
+            min-width: 100%;
+        }
+        li{
+            min-width: 300px;
+            max-width: 350px;
+            min-height: 380px;
+        }
+    }
 `

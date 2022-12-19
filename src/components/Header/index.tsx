@@ -36,12 +36,10 @@ export const HeaderDashboard = () => {
 
                     {cart.length > 0 && 
                         <div onClick={() => setModal(true)}>
-                            <div>
-                                <IoCart />
-                            </div>
-                                <span>
-                                    {cart.length}
-                                </span>
+                            <IoCart />
+                            <span>
+                                {cart.length}
+                            </span>
                         </div>}
 
                     {cart.length === 0 && 
