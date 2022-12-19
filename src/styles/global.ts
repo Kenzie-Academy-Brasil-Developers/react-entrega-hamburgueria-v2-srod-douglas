@@ -5,18 +5,18 @@ export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     :root{
-        --color-primary: #f9b209;
-        --color-secundary: #2e302f;
+        --color-secundary: #f9b209;
+        --color-primary: #2e302f;
 
         --color-negative: #E60000;
         --color-warning: #FFCD07;
         --color-success: #168821;
         --color-information: #155BCB;
         
-        --color-grey-600: #333333;
-        --color-grey-300: #828282;
-        --color-grey-100: #E0E0E0;
-        --color-grey-0: #F5F5F5;
+        --color-grey-0: #333333;
+        --color-grey-100: #828282;
+        --color-grey-300: #E0E0E0;
+        --color-grey-600: #F5F5F5;
 
         --font-bold-1: 1.625rem;
         --font-bold-2: 1.375rem;

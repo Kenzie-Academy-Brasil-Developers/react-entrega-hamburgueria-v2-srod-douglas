@@ -6,7 +6,7 @@ import { Modal } from "../Modal"
 import { CartContext } from "../../contexts/CartContext"
 import { UserContext } from "../../contexts/User"
 import { Link } from "react-router-dom"
-import brandLogo from '../../assets/images/brandCodeLogoCrop.png'
+import brandLogo from '../../assets/images/brandCodeLogoCrop-removebg.png'
 import { StyledHeader } from "./styles"
 import { BsSearch } from 'react-icons/bs'
 

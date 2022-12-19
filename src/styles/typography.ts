@@ -41,8 +41,8 @@ export const FontRegular3 = styled.p`
 
 export const FontPrice = styled.span`
     font-size: var(--font-regular-2);
-    font-weight: var(--weight-regular);
-    color: var(--color-primary);
+    font-weight: var(--weight-semibold);
+    color: var(--color-secundary);
 `
 
 export const FontLabelInput = styled.p`

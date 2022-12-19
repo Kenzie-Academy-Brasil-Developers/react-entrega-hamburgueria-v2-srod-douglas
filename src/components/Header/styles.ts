@@ -10,8 +10,7 @@ export const StyledHeader = styled.header`
 
     margin: 0 auto;
 
-
-    background-color: var(--color-secundary);
+    background-color: var(--color-primary);
 
     div:nth-child(1){
         cursor: pointer;
@@ -39,11 +38,10 @@ export const StyledHeader = styled.header`
                 display: flex;
                 align-items: center;
 
-
                 height: 60px;
                 margin-top: .3rem;
 
-                color: var(--color-grey-0);
+                color: var(--color-grey-600);
                 font-size: var(--font-bold-2);
                 
                 cursor: pointer;
@@ -59,12 +57,12 @@ export const StyledHeader = styled.header`
         max-width: 365px;
         height: 60px;
 
-        background-color: var(--color-grey-600);
-        color: var(--color-grey-0);
+        background-color: var(--color-grey-0);
+        color: var(--color-grey-600);
 
         padding: 1rem;
 
-        border: 1px solid var(--color-grey-600);
+        border: 1px solid var(--color-grey-0);
         border-radius: 8px;
 
         font-size: var(--font-regular);
@@ -73,7 +71,7 @@ export const StyledHeader = styled.header`
         outline: none;
 
         & ::placeholder{
-            color: var(--color-grey-0);
+            color: var(--color-grey-600);
             font-size: var(--font-regular);
             font-weight: var(--weight-regular);
         }
@@ -84,7 +82,7 @@ export const StyledHeader = styled.header`
     }
 
     svg{
-        color: var(--color-grey-0);
+        color: var(--color-grey-600);
     }
 
     a{

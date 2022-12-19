@@ -20,10 +20,10 @@ export const ButtonLogin = styled.button`
     transition: .5s;
 
     &:hover{
-        color: var(--color-primary);
-        background-color: var(--color-grey-600);
-        border: 1px solid var(--color-grey-600);
-        box-shadow: rgba(999, 999, 999, .99) 5px 2px 29px 5px;
+        color: var(--color-grey-600);
+        background-color: var(--color-secundary);
+        border: 1px solid var(--color-secundary);
+        box-shadow: rgba(999, 999, 999, .4) 2px 2px 9px 2px;
         letter-spacing: .2rem;
     }
 `
@@ -50,7 +50,7 @@ export const ButtonRegister = styled.button`
         color: var(--color-grey-0);
         background-color: var(--color-grey-600);
         border: 1px solid var(--color-grey-600);
-        box-shadow: rgba(999, 999, 999, .99) 5px 2px 29px 5px;
+        box-shadow: rgba(999, 999, 999, .4) 2px 2px 9px 2px;
         letter-spacing: .2rem;
     }
 `
@@ -92,10 +92,10 @@ export const ButtonAddToCart = styled.button`
     transition: .5s;
 
     &:hover{
-        color: var(--color-grey-0);
-        background-color: var(--color-primary);
-        border: 1px solid var(--color-primary);
-        box-shadow: rgba(999, 999, 999, .5) 0px 0px 29px 0px;
+        color: var(--color-grey-600);
+        background-color: rgba(255, 165, 0, 1);
+        border: 1px solid var(--color-secundary);
+        box-shadow: rgba(999, 999, 999, .5) 0px 0px 9px 0px;
         letter-spacing: .2rem;
     }
 `

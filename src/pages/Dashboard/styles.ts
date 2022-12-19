@@ -25,28 +25,30 @@ export const StyledMainDashboard = styled.main`
     li{
         display: flex;
         flex-direction: column;
-        width: 300px;
+        width: 280px;
         height: 350px;
         border: .5px solid var(--color-grey-0);
         border-radius: 8px;
         transition: .5s;
 
         :hover{
-            border: 1px solid var(--color-primary);
+            border: 1px solid var(--color-secundary);
 
             div:nth-child(1){
-                background-color: var(--color-primary);
+                background-color: var(--color-secundary);
             }
 
             div:nth-child(2){
                 background-color: rgb(2, 8, 5, .5);
             }
             button{
-                background-color: var(--color-primary);
+                color: var(--color-grey-600);
+                background-color: var(--color-secundary);
             }
         }
 
     }
+
     img{
         display: flex;
 
@@ -70,13 +72,13 @@ export const StyledMainDashboard = styled.main`
         border-top-right-radius: 8px;
 
         transition: .5s;
-
     }
 
     div:nth-child(2){
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+
         height: 80%;
         padding: 1rem;
 
@@ -87,6 +89,6 @@ export const StyledMainDashboard = styled.main`
     }
 
     h2{
-        color: var(--color-grey-0);
+        color: var(--color-grey-600);
     }
 `
