@@ -51,3 +51,11 @@ export const FontLabelInput = styled.p`
     font-weight: var(--weight-semibold);
     color: var(--color-grey-600);
 `
+
+export const TextError = styled.span`
+    display: block;
+    width: 100%;
+    color: var(--color-negative);
+    font-weight: var(--weight-semibold);
+    margin-top: .3rem;
+`

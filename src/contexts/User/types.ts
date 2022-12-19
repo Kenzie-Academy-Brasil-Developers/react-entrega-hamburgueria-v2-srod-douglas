@@ -13,6 +13,8 @@ export interface iUserContextValues{
     setUserPersist: React.Dispatch<SetStateAction<boolean>>;
     submitLogin: SubmitHandler<iFormLogin>;
     logoutUser: () => void;
+    loading: boolean;
+    setLoading: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export interface iDefaultErrorApi{

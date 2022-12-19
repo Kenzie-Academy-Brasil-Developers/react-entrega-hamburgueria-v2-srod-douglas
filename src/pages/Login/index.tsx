@@ -13,7 +13,7 @@ export const LoginPage = () => {
         return <Navigate to='/dashboard' />
     }
     return(
-        <StyledMainLoginPage>
+        <StyledMainLoginPage className="animate__animated animate__slideInRight animate__slow">
             <section>
                 <FormLogin/>
             </section>

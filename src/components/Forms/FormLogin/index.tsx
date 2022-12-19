@@ -5,9 +5,10 @@ import { iFormLogin } from "./types";
 import { useContext } from "react";
 import { UserContext } from "../../../contexts/User";
 import { ButtonLogin, ButtonRegister } from "../../../styles/buttons";
-import { FontLabelInput, FontRegular1, TitleBold1 } from "../../../styles/typography";
+import { FontLabelInput, FontRegular1, TextError, TitleBold1 } from "../../../styles/typography";
 
 import { StyledForm } from "./styles";
+import { Link } from "react-router-dom";
 
 export const FormLogin = () => {
     
@@ -24,22 +25,22 @@ export const FormLogin = () => {
                     Login
                 </TitleBold1>
             </div>
-            <StyledForm onSubmit={handleSubmit(submitLogin)}>
+            <StyledForm noValidate onSubmit={handleSubmit(submitLogin)}>
 
                 <fieldset className="animate__animated animate__fadeInRight animate__slow">
                     <FontLabelInput>
                         Nome
                     </FontLabelInput>
-                    <input id="email" placeholder='Insira seu email'        type="text" {...register("email")}/>
-                    {errors.email && <p>{errors.email.message}</p>}
+                    <input id="email" placeholder='Insira seu email'        type="text" {...register("email")} autoComplete="off" required/>
+                    {errors.email && <TextError>{errors.email.message}</TextError>}
                 </fieldset>
 
                 <fieldset className="animate__animated animate__fadeInRight animate__slower">
                     <FontLabelInput>
                         Senha
                     </FontLabelInput>
-                    <input id="password" placeholder='Insira sua senha' type="password" {...register("password")} />
-                    {errors.password && <p>{errors.password.message}</p>}
+                    <input id="password" placeholder='Insira sua senha' type="password" {...register("password")} autoComplete="off" required />
+                    {errors.password && <TextError>{errors.password.message}</TextError>}
                 </fieldset>
 
                 <ButtonLogin type="submit">Logar</ButtonLogin>
@@ -49,9 +50,11 @@ export const FormLogin = () => {
             <FontRegular1>
                 Crie sua conta para saborear muitas delícias e matar sua fome!
             </FontRegular1>
-            <ButtonRegister>
-                Cadastrar
-            </ButtonRegister>
+            <Link to="/register">
+                <ButtonRegister>
+                    Cadastrar
+                </ButtonRegister>
+            </Link>
         </>
     )
 };

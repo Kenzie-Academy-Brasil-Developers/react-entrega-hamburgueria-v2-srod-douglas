@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { api } from '../../../services/api';
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { formRegisterSchema } from './formRegisterSchema';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AxiosError } from 'axios';
 import { toast } from 'react-toastify';
 import { iFormRegister, iDefaultErrorApi } from './types';
+import { StyledFormRegister } from './styles';
+import { ButtonRegister } from '../../../styles/buttons';
+import { TextError } from '../../../styles/typography';
 
 export const FormRegister = () => {
 
@@ -41,38 +43,35 @@ export const FormRegister = () => {
     })(); 
   }
 
-
-
-   
   return (
     <>
       <div>
         <h2>Cadastro</h2>
-        <a href="/login">Retornar para o login</a>
+        <Link to="/login">Retornar para o login</Link>
       </div>
-      <form onSubmit={handleSubmit(submitRegister)}>
+      <StyledFormRegister noValidate autoComplete='off' onSubmit={handleSubmit(submitRegister)}>
 
         <fieldset>
-        <label>Nome</label>
-        <input id="name" placeholder='Insira seu nome' type="text" {...register("name")}/>
-        {errors.name && <p>{errors.name.message}</p>}
+          <label>Nome</label>
+          <input id="name" placeholder='Insira seu nome' type="text" {...register("name")} required/>
+          {errors.name && <TextError>{errors.name.message}</TextError>}
         </fieldset>
 
         <fieldset>
-        <label>Email</label>
-        <input id="email" placeholder='Insira seu email' type="email" {...register("email")} />
-        {errors.email && <p>{errors.email.message}</p>}
+          <label>Email</label>
+          <input id="email" placeholder='Insira seu email' type="email" {...register("email")} required />
+          {errors.email && <TextError>{errors.email.message}</TextError>}
         </fieldset>
 
-        <input id="password" placeholder='Senha' type="password" {...register("password")} />
-        {errors.password && <p>{errors.password.message}</p>}
+        <input id="password" placeholder='Senha' type="password" {...register("password")} required />
+        {errors.password && <TextError>{errors.password.message}</TextError>}
 
-        <input id="passwordConfirm" placeholder='Confirmar Senha' type="password" {...register("passwordConfirm")} />
-        {errors.passwordConfirm && <p>{errors.passwordConfirm.message}</p>}
+        <input id="passwordConfirm" placeholder='Confirmar Senha' type="password" {...register("passwordConfirm")} required />
+        {errors.passwordConfirm && <TextError>{errors.passwordConfirm.message}</TextError>}
 
-        <button type="submit">Cadastrar</button>
+        <ButtonRegister type="submit">Cadastrar</ButtonRegister>
         
-      </form>
+      </StyledFormRegister>
     </>
   )
 };
