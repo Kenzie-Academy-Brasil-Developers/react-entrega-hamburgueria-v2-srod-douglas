@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { DashboardContext } from "../../contexts/Dashboard"
 import { IoCart } from 'react-icons/io5'
-import { MdRemoveShoppingCart } from 'react-icons/md'
+import { MdLogout, MdRemoveShoppingCart } from 'react-icons/md'
 import { Modal } from "../Modal"
 import { CartContext } from "../../contexts/CartContext"
 import { UserContext } from "../../contexts/User"
@@ -32,8 +32,9 @@ export const HeaderDashboard = () => {
                     </form>
                     {cart.length > 0 && <div onClick={() => setModal(true)}><IoCart /><span>{cart.length}</span></div>}
                     {cart.length === 0 && <div><MdRemoveShoppingCart /><span>{cart.length}</span></div>}
-{/*                     <button type="button" onClick={logoutUser}>Logout</button> */}
-                    <Link onClick={logoutUser} to="/login">Logout</Link>
+                    <div>
+                        <Link onClick={logoutUser} to="/login"><MdLogout/></Link>
+                    </div>
                 </div>
             </header>
         </>

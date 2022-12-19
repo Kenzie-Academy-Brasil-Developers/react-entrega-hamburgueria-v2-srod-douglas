@@ -5,13 +5,13 @@ import { AllRoutes } from './routes';
 
 function App() {
   return (
-    <UserProvider>
-      <DashboardProvider>
-        <CartProvider>
-          <AllRoutes/>
-        </CartProvider>
-      </DashboardProvider>
-    </UserProvider>
+      <UserProvider>
+        <DashboardProvider>
+          <CartProvider>
+            <AllRoutes/>
+          </CartProvider>
+        </DashboardProvider>
+      </UserProvider>
   );
 }
 
