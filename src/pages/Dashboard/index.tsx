@@ -12,9 +12,9 @@ export const DashboardPage = () => {
     };
 
     return(
-        <div className="animate__animated animate__slideInRight animate__slower">
+        <div>
             <HeaderDashboard />
-            <main>
+            <main className="animate__animated animate__slideInRight animate__slower">
                 <section>
                     <ListCards/>
                 </section>

@@ -39,7 +39,7 @@ export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
       }
     };
     getProducts()
-  });
+  }, [user]);
 
   useEffect(() => {
     if(!user){
