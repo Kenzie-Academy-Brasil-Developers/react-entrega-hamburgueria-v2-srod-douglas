@@ -1,12 +1,14 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { CgMathMinus, CgMathPlus } from 'react-icons/cg'
 import { toast } from 'react-toastify'
+import { CartContext } from '../../contexts/CartContext'
 import { DashboardContext } from '../../contexts/Dashboard'
 import { idataProducts } from '../../contexts/Dashboard/types'
 
 export const Modal = () => {
-    const { cart, setModal, cartToRender, totalCart, setCart, setCartToRender, addToCart } = useContext(DashboardContext)
+    const { setModal } = useContext(DashboardContext)
+    const { cart, setCart, cartToRender, setCartToRender, totalCart, addToCart } = useContext(CartContext)
 
     const removeToCart = (product: idataProducts) => {
         setCartToRender(cart.filter((item) => item !== product))
