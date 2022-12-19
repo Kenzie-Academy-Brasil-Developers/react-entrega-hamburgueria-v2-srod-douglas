@@ -10,9 +10,6 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-
-
-
   <BrowserRouter>
     <ToastContainer
       position="top-right"
@@ -29,6 +26,5 @@ root.render(
     <GlobalStyle/>
     <App />
   </BrowserRouter>
-
 );
 reportWebVitals();

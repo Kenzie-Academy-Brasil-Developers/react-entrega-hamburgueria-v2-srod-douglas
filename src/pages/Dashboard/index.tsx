@@ -12,7 +12,7 @@ export const DashboardPage = () => {
     };
 
     return(
-        <div>
+        <div className="animate__animated animate__slideInRight animate__slower">
             <HeaderDashboard />
             <main>
                 <section>

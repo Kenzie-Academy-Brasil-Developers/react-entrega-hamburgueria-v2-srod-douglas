@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-export const StyledMainLoginPage = styled.main`
+export const StyledMainRegisterPage = styled.main`
+
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,9 +12,14 @@ export const StyledMainLoginPage = styled.main`
 
     margin: 0 auto;
 
-    section:nth-child(1) {
+    section:nth-child(1){
         height: 500px;
+        box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 15px 0px;
+    }
+
+    section:nth-child(2) {
         width: 460px;
+        height: 580px;
 
         display: flex;
         flex-direction: column;
@@ -22,22 +28,10 @@ export const StyledMainLoginPage = styled.main`
 
         & div{
             display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            margin: 0 auto;
-            margin-top: -1rem;
+            margin-bottom: -2rem;
         }
-
-        a{
-            width: 100%
-        }
-    }
-
-    section:nth-child(2) > div{
-        max-width: 100%;
-
-        & img {
-            max-width: 100%;
-            box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
-        }
-    }
+}
 `

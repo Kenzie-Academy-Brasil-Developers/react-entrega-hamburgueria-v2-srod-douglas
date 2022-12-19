@@ -4,6 +4,7 @@ import { UserProvider } from './contexts/User';
 import { AllRoutes } from './routes';
 
 function App() {
+
   return (
       <UserProvider>
         <DashboardProvider>
