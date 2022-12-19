@@ -37,16 +37,14 @@ export const UserProvider = ({ children }: iUserProviderProps) => {
 
     useEffect(() => {
         const idUser = window.localStorage.getItem("@ID_US:")
-        console.log(idUser)
         if(idUser !== null){
             (async() => {
                 try {
-                    const res = await api.get(`users/${Number(idUser)}`, {
+                    await api.get(`users/${Number(idUser)}`, {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }
                     })
-                    console.log(res)
                     setUser(true)
                     navigate('/dashboard')
                 } catch (error) {
