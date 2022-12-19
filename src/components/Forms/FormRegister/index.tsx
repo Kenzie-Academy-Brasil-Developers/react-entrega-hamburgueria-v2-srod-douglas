@@ -10,9 +10,8 @@ import { toast } from 'react-toastify';
 import { iFormRegister, iDefaultErrorApi } from './types';
 
 export const FormRegister = () => {
-  const navigate = useNavigate()
-/*   const [dataRegister, setDataRegister] = useState({} as iFormRegister) */
 
+  const navigate = useNavigate()
   const { register, handleSubmit, formState: { errors } } = useForm<iFormRegister>({
     mode: "onBlur",
     resolver: yupResolver(formRegisterSchema)
@@ -22,7 +21,6 @@ export const FormRegister = () => {
 
     const { name, email, password } = data;
     const newData = { name, email, password };
-/*     setDataRegister(newData) */
 
     (async()=>{
       if(newData.password){

@@ -1,10 +1,10 @@
 import { useContext } from 'react'
-import { DashboardContext } from '../../contexts/Dashboard'
+import { CartContext } from '../../contexts/CartContext'
 import { idataProducts } from '../../contexts/Dashboard/types'
 import { iCardProps } from './types'
 
 export const Card = ({ products }: iCardProps) => {
-  const { cart, addToCart } = useContext(DashboardContext)
+  const { addToCart } = useContext(CartContext)
 
   return(
     <>

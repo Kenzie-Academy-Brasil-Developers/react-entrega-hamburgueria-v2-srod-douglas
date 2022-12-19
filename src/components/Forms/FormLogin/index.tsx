@@ -1,39 +1,17 @@
-import { AxiosError } from "axios";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { toast } from "react-toastify";
-import { api } from "../../../services/api";
+import { useForm } from "react-hook-form";
 import { formLoginSchema } from "./FormLoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { iFormLogin, iDefaultErrorApi } from "./types";
-import { useNavigate } from "react-router-dom";
+import { iFormLogin } from "./types";
 import { useContext } from "react";
-import { DashboardContext } from "../../../contexts/Dashboard";
+import { UserContext } from "../../../contexts/User";
 
 export const FormLogin = () => {
-    const navigate = useNavigate()
-    const { setToken } = useContext(DashboardContext)
-
+    
+    const { submitLogin } = useContext(UserContext)
     const { register, handleSubmit, formState: { errors } } = useForm<iFormLogin>({
         mode: "onBlur",
         resolver: yupResolver(formLoginSchema)
     });
-
-    const submitLogin: SubmitHandler<iFormLogin> = (data) => {
-        (async()=>{
-            try {
-                const res = await api.post("login", data);
-                window.localStorage.setItem("@TK_US:", res.data.accessToken)
-                setToken(res.data.accessToken)
-                toast.success("Login efetuado!")
-                navigate("/dashboard")
-
-            } catch (error) {
-                const defaultError = error as AxiosError<iDefaultErrorApi>
-                console.log(defaultError.response?.data)
-                toast.error("Confira os dados e tente novamente")
-            }
-        })(); 
-    }
     
     return (
         <>
