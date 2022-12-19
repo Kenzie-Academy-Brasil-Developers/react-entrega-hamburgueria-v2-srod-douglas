@@ -14,12 +14,12 @@ import {
 export const DashboardContext = createContext({} as iDashboardContextValues);
 
 export const DashboardProvider = ({ children }: iDashboardProviderProps) => {
-  const navigate = useNavigate()
   const { token, user } = useContext(UserContext)
   const [dataProducts, setDataProducts] = useState([] as idataProducts[]);
   const [search, setSearch] = useState<iSearchProduct | any>()
   const [modal, setModal] = useState(false)
   const [numberItems, setNumberItems] = useState(0)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const getProducts = async () => {
