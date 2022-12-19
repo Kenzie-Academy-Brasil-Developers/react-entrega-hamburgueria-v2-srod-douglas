@@ -12,9 +12,14 @@ export const StyledMainRegisterPage = styled.main`
 
     margin: 0 auto;
 
+    img{
+        border-radius: 20px;
+    }
+
     section:nth-child(1){
         height: 500px;
         box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 15px 0px;
+        border-radius: 20px;
     }
 
     section:nth-child(2) {
@@ -33,5 +38,12 @@ export const StyledMainRegisterPage = styled.main`
             width: 100%;
             margin-bottom: -2rem;
         }
+    h2, label, a{
+        color: var(--color-grey-600);
+    }
+    a:hover{
+        transition: .5s;
+        letter-spacing: .2rem;
+    }
 }
 `

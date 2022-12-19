@@ -30,14 +30,21 @@ export const StyledMainLoginPage = styled.main`
         a{
             width: 100%
         }
+        p{
+            color: var(--color-grey-600);
+        }
     }
 
-    section:nth-child(2) > div{
+    section:nth-child(2){
         max-width: 100%;
-
+        border-radius: 8px;
         & img {
             max-width: 100%;
             box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
+            border-radius: 20px;
         }
+    }
+    h1{
+        color: var(--color-grey-600);
     }
 `

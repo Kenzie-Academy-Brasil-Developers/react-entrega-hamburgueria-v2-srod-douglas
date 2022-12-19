@@ -46,8 +46,8 @@ export const StyledFormRegister = styled.form`
             height: 60px;
             padding: 15px 20px;
 
-            color: var(--color-grey-0);
-            background-color: var(--color-grey-600);
+            color: var(--color-grey-600);
+            background-color: var(--color-grey-0);
 
             border: none;
             border-radius: 8px;
@@ -63,14 +63,14 @@ export const StyledFormRegister = styled.form`
     input {
         width: 100%;
         height: 60px;
-        background-color: var(--color-grey-600);
+        background-color: var(--color-grey-0);
         border: none;
         border-radius: 8px;
         padding: 15px 20px;
         font-size: var(--font-regular-1);
         font-weight: var(--weight-regular);
         outline: none;
-        color: var(--color-grey-0);
+        color: var(--color-grey-600);
         box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
 
         & ::placeholder{

@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { HeaderDashboard } from "../../components/Header"
 import { ListCards } from "../../components/ListCards"
 import { UserContext } from "../../contexts/User";
+import { StyledMainDashboard } from "./styles";
 
 export const DashboardPage = () => {
     const { user, userPersist } = useContext(UserContext);
@@ -14,11 +15,11 @@ export const DashboardPage = () => {
     return(
         <div>
             <HeaderDashboard />
-            <main className="animate__animated animate__slideInRight animate__slower">
+            <StyledMainDashboard className="animate__animated animate__slideInRight animate__slower">
                 <section>
                     <ListCards/>
                 </section>
-            </main>
+            </StyledMainDashboard>
         </div>
     )
 }

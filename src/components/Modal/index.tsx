@@ -6,6 +6,7 @@ import { CartContext } from '../../contexts/CartContext'
 import { DashboardContext } from '../../contexts/Dashboard'
 import { idataProducts } from '../../contexts/Dashboard/types'
 import { ButtonRemoveAll } from '../../styles/buttons'
+import { BodyModal, ContainerModal } from './styles'
 
 export const Modal = () => {
     const { setModal } = useContext(DashboardContext)
@@ -25,43 +26,44 @@ export const Modal = () => {
 
     if(cart.length > 0){
         return (
-            <div>
-                <div>
-                    <h2>Carrinho de compras</h2>
-                    <div onClick={() => setModal(false)}>
-                        <AiFillCloseCircle />
+            <ContainerModal>
+                <BodyModal>
+                    <div>
+                        <h2>Carrinho de compras</h2>
+                        <div onClick={() => setModal(false)}>
+                            <AiFillCloseCircle />
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <ul>
-                        {cartToRender.map((product, index) =>
-                            <li key={index}>
-                                <div>
+                    <div>
+                        <ul>
+                            {cartToRender.map((product, index) =>
+                                <li key={index}>
                                     <div>
-                                        <img src={product.img} />
-                                    </div>
-                                    <div>
-                                        <h2>{product.name}</h2>
                                         <div>
-                                            <div onClick={() => removeToCart(product)}>
-                                                <CgMathMinus/>
-                                            </div>
+                                            <img src={product.img} />
+                                        </div>
+                                        <div>
+                                            <h2>{product.name}</h2>
                                             <div>
-                                                <span>
-                                                    {cart.filter((item) => item.id === product.id).length}
-                                                </span>
-                                            </div>
-                                            <div onClick={() => addToCart(product)}>
-                                                <CgMathPlus/>
+                                                <div onClick={() => removeToCart(product)}>
+                                                    <CgMathMinus/>
+                                                </div>
+                                                <div>
+                                                    <span>
+                                                        {cart.filter((item) => item.id === product.id).length}
+                                                    </span>
+                                                </div>
+                                                <div onClick={() => addToCart(product)}>
+                                                    <CgMathPlus/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                            </li>
-                        )}
-                    </ul>
-                </div>
+                                </li>
+                            )}
+                        </ul>
+                    </div>
                 <div>
                             <h2>Total</h2>
                             <h2>{totalCart}</h2>
@@ -69,7 +71,8 @@ export const Modal = () => {
                 <div>
                     <ButtonRemoveAll onClick={() => removeAll()}>Remover Todos</ButtonRemoveAll>
                 </div>
-            </div>
+                </BodyModal>
+            </ContainerModal>
         )
     }else{
         return(

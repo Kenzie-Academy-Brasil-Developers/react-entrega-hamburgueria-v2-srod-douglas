@@ -1,22 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 import "react-toastify/dist/ReactToastify.css";
-import Fade from 'react-awesome-reveal'
+
 export const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     :root{
-        --color-primary: #f9b209;
-        --color-secundary: #2e302f;
+        --color-secundary: #f9b209;
+        --color-primary: #2e302f;
 
         --color-negative: #E60000;
         --color-warning: #FFCD07;
         --color-success: #168821;
         --color-information: #155BCB;
         
-        --color-grey-600: #333333;
-        --color-grey-300: #828282;
-        --color-grey-100: #E0E0E0;
-        --color-grey-0: #F5F5F5;
+        --color-grey-0: #333333;
+        --color-grey-100: #828282;
+        --color-grey-300: #E0E0E0;
+        --color-grey-600: #F5F5F5;
 
         --font-bold-1: 1.625rem;
         --font-bold-2: 1.375rem;
@@ -31,9 +31,7 @@ export const GlobalStyle = createGlobalStyle`
         --weight-regular: 400;
         --weight-semibold: 600;
         --weight-bold: 700;
-
     }
-
 
     *{
         font-family: "Inter", sans-serif;
@@ -45,22 +43,22 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
 
         cursor: default;
-
     }
+
     #root{
         height: 100vh;
         width: 100%;
     }
+
     body{
         width: 100%;
         height: 100%;
-        background-image: url('/backgroundwhite.png');
+        background-image: url('/backgrounddark.png');
     }
+
     a{
         text-decoration: none;
-
         color: var(--color-grey-1);
-
         cursor: pointer;
         transition: .5s;
     }

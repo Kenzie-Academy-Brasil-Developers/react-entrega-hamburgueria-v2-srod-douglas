@@ -4,6 +4,7 @@ import { FormLogin } from "../../components/Forms/FormLogin"
 import { UserContext } from "../../contexts/User"
 import { StyledMainLoginPage } from "./styles"
 import brandWhite from '../../assets/images/BRANDWHITE.png'
+import brandDark from '../../assets/images/BRANDDARK.png'
 import 'animate.css'
 
 export const LoginPage = () => {
@@ -18,7 +19,7 @@ export const LoginPage = () => {
                 <FormLogin/>
             </section>
             <section className="animate__animated animate__fadeInLeft animate__slower">
-                <img src={brandWhite} />
+                <img src={brandDark} />
             </section>
         </StyledMainLoginPage>
     )

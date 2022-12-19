@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 import { iFormRegister, iDefaultErrorApi } from './types';
 import { StyledFormRegister } from './styles';
 import { ButtonRegister } from '../../../styles/buttons';
-import { TextError } from '../../../styles/typography';
+import { TextError, TitleBold2 } from '../../../styles/typography';
 
 export const FormRegister = () => {
 
@@ -46,7 +46,7 @@ export const FormRegister = () => {
   return (
     <>
       <div>
-        <h2>Cadastro</h2>
+        <TitleBold2>Cadastro</TitleBold2>
         <Link to="/login">Retornar para o login</Link>
       </div>
       <StyledFormRegister noValidate autoComplete='off' onSubmit={handleSubmit(submitRegister)}>
