@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import "react-toastify/dist/ReactToastify.css";
 
 export const GlobalStyle = createGlobalStyle`
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
     :root{
         --color-primary: #f9b209;
@@ -42,13 +43,19 @@ export const GlobalStyle = createGlobalStyle`
 
         list-style: none;
         text-decoration: none;
-        font-family: "Inter", sans-serif;
 
         cursor: default;
 
-        background-color: var(--color-grey-4);
     }
-
+    #root{
+        height: 100vh;
+        width: 100%;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        background-image: url('/backgroundwhite.png');
+    }
     a{
         text-decoration: none;
 
@@ -56,5 +63,14 @@ export const GlobalStyle = createGlobalStyle`
 
         cursor: pointer;
         transition: .5s;
+    }
+
+    svg{
+        cursor: pointer;
+    }
+
+    button{
+        transition: 1s;
+        cursor: pointer;
     }
 `

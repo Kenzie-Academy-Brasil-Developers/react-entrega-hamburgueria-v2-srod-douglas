@@ -10,6 +10,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
+
+
+
   <BrowserRouter>
     <ToastContainer
       position="top-right"
@@ -21,10 +24,11 @@ root.render(
       pauseOnFocusLoss
       draggable
       pauseOnHover
-      theme="light"
+      theme="dark"
       />
     <GlobalStyle/>
     <App />
   </BrowserRouter>
+
 );
 reportWebVitals();

@@ -1,3 +1,6 @@
+import styled from "styled-components";
+import bgWhite from '../assets/images/backgroundwhite.png'
+
 export const lightTheme = {
 
     color: "#0e14e",
@@ -11,3 +14,9 @@ export const lightTheme = {
   
     },
   };
+
+export const ContentBg = styled.div`
+width: 100%;
+height: 100%;
+  background-image: (${bgWhite})
+`

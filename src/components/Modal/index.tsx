@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import { CartContext } from '../../contexts/CartContext'
 import { DashboardContext } from '../../contexts/Dashboard'
 import { idataProducts } from '../../contexts/Dashboard/types'
+import { ButtonRemoveAll } from '../../styles/buttons'
 
 export const Modal = () => {
     const { setModal } = useContext(DashboardContext)
@@ -66,7 +67,7 @@ export const Modal = () => {
                             <h2>{totalCart}</h2>
                 </div>
                 <div>
-                    <button onClick={() => removeAll()}>Remover Todos</button>
+                    <ButtonRemoveAll onClick={() => removeAll()}>Remover Todos</ButtonRemoveAll>
                 </div>
             </div>
         )
