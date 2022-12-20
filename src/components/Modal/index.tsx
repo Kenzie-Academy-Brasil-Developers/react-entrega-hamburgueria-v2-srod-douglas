@@ -28,13 +28,13 @@ export const Modal = () => {
         return (
             <ContainerModal>
                 <BodyModal>
-                    <div>
+                    <header>
                         <h2>Carrinho de compras</h2>
                         <div onClick={() => setModal(false)}>
                             <AiFillCloseCircle />
                         </div>
-                    </div>
-                    <div>
+                    </header>
+                    <main>
                         <ul>
                             {cartToRender.map((product, index) =>
                                 <li key={index}>
@@ -44,7 +44,7 @@ export const Modal = () => {
                                         </div>
                                         <div>
                                             <h2>{product.name}</h2>
-                                            <div>
+                                            <fieldset>
                                                 <div onClick={() => removeToCart(product)}>
                                                     <CgMathMinus/>
                                                 </div>
@@ -56,14 +56,14 @@ export const Modal = () => {
                                                 <div onClick={() => addToCart(product)}>
                                                     <CgMathPlus/>
                                                 </div>
-                                            </div>
+                                            </fieldset>
                                         </div>
                                     </div>
 
                                 </li>
                             )}
                         </ul>
-                    </div>
+                    </main>
                 <div>
                             <h2>Total</h2>
                             <h2>{totalCart}</h2>

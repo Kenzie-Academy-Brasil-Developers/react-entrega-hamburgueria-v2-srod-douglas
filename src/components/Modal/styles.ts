@@ -29,38 +29,64 @@ export const BodyModal = styled.div`
 
     background-color: var(--color-grey-0);
 
-    div:nth-child(1){
+    header{
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
+        padding: 0 1rem;
 
         width: 100%;
         height: 100px;
         background-color: var(--color-secundary);
     }
 
+    main{
+        overflow-y: scroll;
+        height: 600px;
+        max-width: 600px;
+    }
+
+    main > div:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     ul{
+
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 20px;
         background-color: var(--color-success);
     }
-    li{
+
+    main > ul > li{
         width: 100%;
-        height: 200px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         padding: 1rem;
         gap: 20px;
         background-color: rgba(44, 44, 44, .9);
 
-        > div {
+        & > div {
             display: flex;
-            height: 100%;
+            height: 100px;
             width: 100%;
         }
     }
+
     img{
         width: 50px;
+    }
+
+    fieldset{
+        border: none;
+        display: flex;
+        :nth-child(1){
+            color: var(--color-success);
+        }
     }
 `
