@@ -18,8 +18,8 @@ export const ContainerModalWithItems = styled.div`
 `
 
 export const BodyModal = styled.div`
-    width: 600px;
-    height: 600px;
+    max-width: 600px;
+    max-height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -206,6 +206,12 @@ export const BodyModal = styled.div`
             color: var(--color-success);
         }
     }
+
+    @media(max-width: 768px){
+        max-widht: 100%;
+        max-height: 550px;
+        margin: 5rem 1rem 1rem 1rem;
+    }
 `
 
 export const ContainerModalEmpty = styled.div`
@@ -225,7 +231,7 @@ export const ContainerModalEmpty = styled.div`
 `
 
 export const BodyModalEmpty = styled.div`
-    width: 600px;
+    max-width: 600px;
     height: 400px;
 
     display: flex;
@@ -312,5 +318,10 @@ export const BodyModalEmpty = styled.div`
                 cursor: default;
             }
         }
+    }
+
+    @media(max-width: 768px){
+        margin: 5rem 1rem 1rem 1rem;
+        height: 500px;
     }
 `

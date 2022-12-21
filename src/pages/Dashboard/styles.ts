@@ -93,25 +93,29 @@ export const StyledMainDashboard = styled.main`
     }
 
     @media(max-width: 767px){
-        main{
-            min-width: 100%;
-        }
+
+        max-width: 100%;
+        padding: 0;
+
         section{
-            margin-top: 4rem;
+            margin-top: 5rem;
             min-width: 100%;
         }
 
         ul{
             flex-direction: row;
             flex-wrap: nowrap;
+            justify-content: flex-start;
             overflow-x: auto;
             height: 450px;
             min-width: 100%;
+            gap: 1rem;
         }
         li{
-            min-width: 300px;
+            min-width: 250px;
             max-width: 350px;
             min-height: 380px;
+            margin: 0 .5rem 0 .5rem;
         }
     }
 `

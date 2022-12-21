@@ -25,32 +25,34 @@ export const HeaderDashboard = () => {
     return (
         <>
             <StyledHeader>
-                <div>
-                    <img src={brandLogo}/>
-                </div>
-                <div>
-                    <form>
-                        <input onChange={(event) => setSearch(event.target.value)} type="text" placeholder="Digitar Pesquisa"/>
-                        <BsSearch />
-                    </form>
+                <div className="container">
+                    <div>
+                        <img src={brandLogo}/>
+                    </div>
+                    <div>
+                        <form>
+                            <input onChange={(event) => setSearch(event.target.value)} type="text" placeholder="Digitar Pesquisa"/>
+                            <BsSearch />
+                        </form>
 
-                    {cart.length > 0 && 
-                        <div onClick={() => setModal(true)}>
-                            <IoCart />
-                            <span>
-                                {cart.length}
-                            </span>
-                        </div>}
-
-                    {cart.length === 0 && 
-                        <div>
-                            <MdRemoveShoppingCart />
+                        {cart.length > 0 && 
+                            <div onClick={() => setModal(true)}>
+                                <IoCart />
                                 <span>
                                     {cart.length}
                                 </span>
-                        </div>}
-                    <div>
-                        <Link onClick={logoutUser} to="/login"><MdLogout/></Link>
+                            </div>}
+
+                        {cart.length === 0 && 
+                            <div>
+                                <MdRemoveShoppingCart />
+                                    <span>
+                                        {cart.length}
+                                    </span>
+                            </div>}
+                        <div>
+                            <Link onClick={logoutUser} to="/login"><MdLogout/></Link>
+                        </div>
                     </div>
                 </div>
             </StyledHeader>

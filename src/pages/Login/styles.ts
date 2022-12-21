@@ -65,7 +65,7 @@ export const StyledMainLoginPage = styled.main`
         flex-direction: column-reverse;
         width: 100%;
         justify-content: space-around;
-        min-width: 100%;
+        max-width: 100%;
         padding: 0 1rem;
 
         section:nth-child(1) {

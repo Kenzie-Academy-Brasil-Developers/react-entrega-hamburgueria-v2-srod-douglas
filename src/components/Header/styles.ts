@@ -5,15 +5,18 @@ export const StyledHeader = styled.header`
     align-items: center;
     justify-content: space-around;
 
-    box-sizing: border-box;
-
     min-height: 80px;
     width: 100%;
 
-    margin: 0 auto;
-
     background-color: var(--color-primary);
-
+    .container{
+        width: 100%;
+        max-height: 80px;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     div:nth-child(1){
         cursor: pointer;
     }
@@ -28,21 +31,20 @@ export const StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
-        
+        gap: 1rem;
         height: 60px;
-        min-width: 50%;
-        
-/*         margin-right: 2.8rem; */
-/*         gap: 1rem; */
-        
+
+
         cursor: pointer;
 
             > div {
                 display: flex;
                 align-items: center;
 
+                width: 50px;
                 height: 60px;
                 margin-top: .3rem;
+                gap: 1rem;
 
                 color: var(--color-grey-600);
                 font-size: var(--font-bold-2);
@@ -56,7 +58,7 @@ export const StyledHeader = styled.header`
     }
 
     input{
-        max-width: 350px;
+        width: 380px;
         height: 60px;
 
         background-color: var(--color-grey-0);
@@ -101,15 +103,21 @@ export const StyledHeader = styled.header`
     }
 
     @media(max-width: 767px){
-
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
         height: 120px;
+        .container{
+            flex-direction: column;
+            align-items: center;
+            height: 120px;
+        }
+
+        section{
+            max-width: 500px;
+        }
 
         form{
-            width: 50%;
+            max-width: 500px;
         }
+
         input{
             width: 100%;
         }
@@ -119,7 +127,7 @@ export const StyledHeader = styled.header`
             justify-content: center;
             width: 100%;
 
-            >img{
+            img{
                 width: 100%;
                 margin-top: 0;
             }
@@ -128,14 +136,25 @@ export const StyledHeader = styled.header`
         div:nth-child(2){
             width: 100%;
             padding: 0 1rem;
-            display: inline;
+            gap: .2rem;
 
-            >div{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            div{
+                display: contents;
+                justify-content: center;
+                align-items: center;
+
+                width: 50px;
+                max-width: 50px; 
+
                 padding: 0;
                 margin: 0;
-/*                 width: min-content; */
             }
         }
+
         span{
             margin: 0;
         }
