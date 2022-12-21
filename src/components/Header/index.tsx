@@ -11,7 +11,6 @@ import { StyledHeader } from "./styles"
 import { BsSearch } from 'react-icons/bs'
 
 export const HeaderDashboard = () => {
-
     const { modal, setModal, setSearch } = useContext(DashboardContext)
     const { cart } = useContext(CartContext)
     const { logoutUser } = useContext(UserContext)
@@ -27,29 +26,31 @@ export const HeaderDashboard = () => {
             <StyledHeader>
                 <div className="container">
                     <div>
-                        <img src={brandLogo}/>
+                        <img src={brandLogo} alt="Logo code burguer"/>
                     </div>
                     <div>
                         <form>
-                            <input onChange={(event) => setSearch(event.target.value)} type="text" placeholder="Digitar Pesquisa"/>
+                            <input onChange={(event) => setSearch(event.target.value)}
+                                type="text" 
+                                placeholder="Digitar Pesquisa"
+                            />
                             <BsSearch />
                         </form>
-
                         {cart.length > 0 && 
                             <div onClick={() => setModal(true)}>
-                                <IoCart />
+                                <IoCart onClick={() => setModal(true)} />
                                 <span>
                                     {cart.length}
                                 </span>
                             </div>}
-
                         {cart.length === 0 && 
                             <div>
-                                <MdRemoveShoppingCart />
+                                <MdRemoveShoppingCart onClick={() => setModal(true)} />
                                     <span>
                                         {cart.length}
                                     </span>
-                            </div>}
+                            </div>
+                            }
                         <div>
                             <Link onClick={logoutUser} to="/login"><MdLogout/></Link>
                         </div>

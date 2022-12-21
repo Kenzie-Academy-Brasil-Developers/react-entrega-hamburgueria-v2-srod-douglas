@@ -9,14 +9,18 @@ export const StyledHeader = styled.header`
     width: 100%;
 
     background-color: var(--color-primary);
+    box-shadow: 0px 30px 50px 7px rgba(0,0,0,0.75);
+
     .container{
         width: 100%;
         max-height: 80px;
         max-width: 1200px;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     div:nth-child(1){
         cursor: pointer;
     }
@@ -31,25 +35,25 @@ export const StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: center;
+        
         gap: 1rem;
         height: 60px;
 
-
         cursor: pointer;
 
-            > div {
-                display: flex;
-                align-items: center;
+        & > div {
+            display: flex;
+            align-items: center;
 
-                width: 50px;
-                height: 60px;
-                margin-top: .3rem;
-                gap: 1rem;
+            width: 50px;
+            height: 60px;
+            margin-top: .3rem;
+            gap: 1rem;
 
-                color: var(--color-grey-600);
-                font-size: var(--font-bold-2);
-                
-                cursor: pointer;
+            color: var(--color-grey-600);
+            font-size: var(--font-bold-2);
+            
+            cursor: pointer;
         }
     }
     
@@ -104,6 +108,7 @@ export const StyledHeader = styled.header`
 
     @media(max-width: 767px){
         height: 120px;
+        
         .container{
             flex-direction: column;
             align-items: center;

@@ -1,7 +1,7 @@
 export interface iDefaultErrorApi{
     error: string
 }
-  
+
 export interface iFormRegister{
     name: string
     email: string

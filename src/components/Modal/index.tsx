@@ -17,8 +17,7 @@ export const Modal = () => {
     const removeToCart = (product: idataProducts) => {
         setCartToRender(cart.filter((item) => item !== product))
         setCart(cart.filter((item) => item !== product))
-
-    toast.warn(`${product.name} foi removido do carrinho`)
+        toast.warn(`${product.name} foi removido do carrinho`)
     }
 
     const removeAll = () => {
@@ -42,7 +41,7 @@ export const Modal = () => {
                                 <li key={index} className="animate__animated animate__fadeIn">
                                     <div>
                                         <div>
-                                            <img src={product.img} />
+                                            <img src={product.img} alt={product.name} />
                                         </div>
                                         <div>
                                             <h2>{product.name}</h2>
@@ -61,18 +60,19 @@ export const Modal = () => {
                                             </fieldset>
                                         </div>
                                     </div>
-
                                 </li>
                             )}
                         </ul>
                     </main>
-                <div className='total'>
-                            <h2>Total</h2>
-                            <h2>{totalCart}</h2>
-                </div>
-                <div>
-                    <ButtonRemoveAll onClick={() => removeAll()}>Remover Todos</ButtonRemoveAll>
-                </div>
+                    <div className='total'>
+                        <h2>Total</h2>
+                        <h2>{totalCart}</h2>
+                    </div>
+                    <div>
+                        <ButtonRemoveAll onClick={() => removeAll()}>
+                            Remover Todos
+                        </ButtonRemoveAll>
+                    </div>
                 </BodyModal>
             </ContainerModalWithItems>
         )
@@ -80,22 +80,20 @@ export const Modal = () => {
         return(
             <ContainerModalEmpty className="animate__animated animate__fadeIn">
                 <BodyModalEmpty className="animate__animated animate__bounceInDown">
-            <header>
-                <h2>Carrinho de compras</h2>
-                <div onClick={() => setModal(false)}>
-                    <AiFillCloseCircle />
-                </div>
-            </header>
-            <fieldset>
-                <h2>Sua sacola está vazia</h2>
-                <div>
-                    <FaRegSadTear />
-                </div>
-
-                <h3>Adicione itens!</h3>
-            </fieldset>
+                    <header>
+                        <h2>Carrinho de compras</h2>
+                        <div onClick={() => setModal(false)}>
+                            <AiFillCloseCircle />
+                        </div>
+                    </header>
+                    <fieldset>
+                        <h2>Sua sacola está vazia</h2>
+                        <div>
+                            <FaRegSadTear />
+                        </div>
+                        <h3>Adicione itens!</h3>
+                    </fieldset>
             </BodyModalEmpty>
-
         </ContainerModalEmpty>
         )
     }

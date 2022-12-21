@@ -36,16 +36,19 @@ export const BodyModal = styled.div`
     img, svg, path{
         cursor: pointer;
     }
+
     .total{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         width: 100%;
         height: 150px;
         padding: 1rem;
-        border-top: 2px solid var(--color-grey-0);
-        box-shadow: rgba(0, 0, 0, 0.75) 0px -36px 50px -21px;
 
+        border-top: 2px solid var(--color-grey-0);
+
+        box-shadow: rgba(0, 0, 0, 0.75) 0px -36px 50px -21px;
     }
 
     div:last-child {
@@ -58,8 +61,6 @@ export const BodyModal = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        padding: 0 1rem;
 
         width: 100%;
         height: 100px;
@@ -77,12 +78,13 @@ export const BodyModal = styled.div`
             & > svg {
                 width: 100%;
                 height: 100%;
+
                 color: #fff;
                 transition: .5s;
 
                 :hover {
                     color: var(--color-negative);
-            }
+                }
             }
         }
     }
@@ -90,8 +92,10 @@ export const BodyModal = styled.div`
     main{
         overflow-y: auto;
         scroll-behavior: smooth;
+
         height: 600px;
         max-width: 600px;
+
         background-image: url(${img});
         background-repeat: repeat;
         background-attachment: fixed;
@@ -104,73 +108,79 @@ export const BodyModal = styled.div`
     }
 
     ul{
-
         display: flex;
         flex-direction: column;
+
         width: 100%;
         gap: 20px;
         margin-top: .8rem;
         padding-bottom: -1rem;
         padding: 0 .6rem;
+
         box-shadow: rgba(0, 0, 1, 0.9) 0px 10px 29px 20px;
     }
 
     main > ul > li{
         width: 100%;
         height: 120px;
+
         display: flex;
         justify-content: space-between;
+
         padding: 1rem;
         gap: 20px;
+
         background-color: rgba(44, 44, 44, 1);
         box-shadow: rgba(0, 0, 1, 0.8) 0px 10px 29px 20px;
         border-radius: 8px;
 
         & > div {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                height: 100%;
-                width: 100%;
-                gap:1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            height: 100%;
+            width: 100%;
+            gap:1rem;
 
             & > div:nth-child(1) {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 70px;
-                    width: 70px;
-                    border-radius: 8px;
-                    background-color: var(--color-secundary);
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                    & > img {
-                        object-fit: cover;
-                    }
+                height: 70px;
+                width: 70px;
+
+                border-radius: 8px;
+
+                background-color: var(--color-secundary);
+
+                & > img {
+                    object-fit: cover;
+                }
             }
 
             & > div:nth-child(2){
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    height: 100%;
-                    width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
 
+                height: 100%;
+                width: 100%;
 
-/*                     & > h2 {
-                    } */
                 & > fieldset {
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+
                     width: 30%;
                     height: 50%;
 
                         & > div:nth-child(2) > span{
-                                font-size: 2rem;
-                                color: var(--color-grey-600);
+                            font-size: 2rem;
+                            color: var(--color-grey-600);
                         }
                 }
-
 
                 & > fieldset > div:nth-child(odd){
                     height: 30px;
@@ -181,8 +191,10 @@ export const BodyModal = styled.div`
                     align-items: center;
 
                     border-radius: 6px;
+
                     background-color: var(--color-secundary);
                     box-shadow: rgba(0, 0, 1, 0.6) 0px 7px 29px 0px;
+                    
                     cursor: pointer;
                 }
             }
@@ -200,8 +212,10 @@ export const BodyModal = styled.div`
     }
 
     fieldset{
-        border: none;
         display: flex;
+
+        border: none;
+
         :nth-child(1){
             color: var(--color-success);
         }
@@ -210,6 +224,7 @@ export const BodyModal = styled.div`
     @media(max-width: 768px){
         max-widht: 100%;
         max-height: 550px;
+        
         margin: 5rem 1rem 1rem 1rem;
     }
 `
@@ -233,17 +248,18 @@ export const ContainerModalEmpty = styled.div`
 export const BodyModalEmpty = styled.div`
     max-width: 600px;
     height: 400px;
+    margin: 0 auto;
+    margin-top: 10%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 0 auto;
-    margin-top: 10%;
-
     background-color: var(--color-grey-0);
+
     border: 1px solid var(--color-grey-0);
     border-radius: 10px;
+
     box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 10px;
 
     header{
@@ -251,26 +267,27 @@ export const BodyModalEmpty = styled.div`
         justify-content: space-between;
         align-items: center;
 
-        padding: 0 1rem;
-
         width: 100%;
         height: 100px;
+        padding: 1rem;
+
         background-color: var(--color-secundary);
 
         border: 1px solid var(--color-secundary);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        padding: 1rem;
 
         & > div {
             width: 30px;
             height: 30px;
+
             cursor: pointer;
 
             & > svg {
                 width: 100%;
                 height: 100%;
                 color: #fff;
+
                 cursor: pointer;
                 transition: .5s;
 
@@ -290,9 +307,11 @@ export const BodyModalEmpty = styled.div`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         height: 100%;
         width: 100%;
         gap: 2rem;
+
         border: 1px solid var(--color-primary);
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
@@ -309,12 +328,15 @@ export const BodyModalEmpty = styled.div`
         div {
             width: 50px;
             height: 50px;
+
             cursor: default;
 
             svg, path{
                 width: 100%;
                 height: 100%;
+
                 color: var(--color-secundary);
+
                 cursor: default;
             }
         }

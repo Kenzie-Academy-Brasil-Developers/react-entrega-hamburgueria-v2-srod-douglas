@@ -17,14 +17,16 @@ export const ButtonLogin = styled.button`
     font-size: var(--font-bold-3);
     font-weight: var(--weight-semibold);
     letter-spacing: .1rem;
+
     transition: .5s;
 
     &:hover{
         color: var(--color-grey-600);
         background-color: var(--color-secundary);
+
+        letter-spacing: .2rem;
         border: 1px solid var(--color-secundary);
         box-shadow: rgba(999, 999, 999, .4) 2px 2px 9px 2px;
-        letter-spacing: .2rem;
     }
 `
 
@@ -53,9 +55,10 @@ export const LinkRegister = styled(Link)`
     &:hover{
         color: var(--color-grey-0);
         background-color: var(--color-grey-600);
+
+        letter-spacing: .2rem;
         border: 1px solid var(--color-grey-600);
         box-shadow: rgba(999, 999, 999, .4) 2px 2px 9px 2px;
-        letter-spacing: .2rem;
     }
 `
 export const ButtonRegister = styled.button`
@@ -79,9 +82,10 @@ export const ButtonRegister = styled.button`
     &:hover{
         color: var(--color-grey-0);
         background-color: var(--color-grey-600);
+
+        letter-spacing: .2rem;
         border: 1px solid var(--color-grey-600);
         box-shadow: rgba(999, 999, 999, .4) 2px 2px 9px 2px;
-        letter-spacing: .2rem;
     }
 `
 export const ButtonRemoveAll = styled.button`
@@ -104,8 +108,9 @@ export const ButtonRemoveAll = styled.button`
     :hover {
         color: var(--color-grey-600);
         background-color: var(--color-negative);
-        border: 1px solid var(--color-negative);
+
         letter-spacing: .4px;
+        border: 1px solid var(--color-negative);
     }
 `
 
@@ -126,13 +131,15 @@ export const ButtonAddToCart = styled.button`
     font-size: var(--font-bold-3);
     font-weight: var(--weight-semibold);
     letter-spacing: .1rem;
+
     transition: .5s;
 
     &:hover{
         color: var(--color-grey-600);
         background-color: rgba(255, 165, 0, 1);
+
+        letter-spacing: .2rem;
         border: 1px solid var(--color-secundary);
         box-shadow: rgba(999, 999, 999, .5) 0px 0px 9px 0px;
-        letter-spacing: .2rem;
     }
 `

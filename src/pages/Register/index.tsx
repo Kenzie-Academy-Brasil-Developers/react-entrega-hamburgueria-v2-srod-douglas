@@ -4,7 +4,6 @@ import { StyledMainRegisterPage } from './styles'
 import brandCrop from '../../assets/images/brandCodeLogoCrop-removebg.png'
 
 export const RegisterPage = () => {
-  
   return (
     <>
       <StyledMainRegisterPage className="animate__animated animate__slideInLeft animate__slower">

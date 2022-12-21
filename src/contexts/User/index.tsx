@@ -11,6 +11,7 @@ import { iDefaultErrorApi, iFormLogin, iUserContextValues, iUserProviderProps } 
 export const UserContext = createContext({} as iUserContextValues)
 
 export const UserProvider = ({ children }: iUserProviderProps) => {
+
     const [user, setUser] = useState(false);
     const [userPersist, setUserPersist] = useState(true);
     const [loading, setLoading] = useState(false)
@@ -20,32 +21,34 @@ export const UserProvider = ({ children }: iUserProviderProps) => {
     const submitLogin: SubmitHandler<iFormLogin> = (data) => {
         (async()=>{
             try {
-                const res = await api.post("login", data);
                 setLoading(true)
+                const res = await api.post("login", data);
                 window.localStorage.setItem("@TK_US:", res.data.accessToken)
                 window.localStorage.setItem("@ID_US:", res.data.user.id)
                 setUser(true)
                 setUserPersist(true)
+                toast.success("Login efetuado!")
+                navigate('/dashboard')
 
-                setTimeout(() => {
-                    toast.success("Login efetuado!")
-                    navigate('/dashboard')
-                    setLoading(false)
-                }, (4000));
             } catch (error) {
                 const defaultError = error as AxiosError<iDefaultErrorApi>
                 console.log(defaultError.response?.data)
                 toast.error("Confira os dados e tente novamente")
                 setUser(false)
                 setUserPersist(false)
+
+            }finally{
+                setLoading(false)
             }
         })(); 
     }
 
     useEffect(() => {
         const idUser = window.localStorage.getItem("@ID_US:")
+
         if(idUser !== null){
             (async() => {
+                setLoading(true)
                 try {
                     await api.get(`users/${Number(idUser)}`, {
                         headers: {
@@ -53,29 +56,31 @@ export const UserProvider = ({ children }: iUserProviderProps) => {
                         }
                     })
                     setUser(true)
+                    navigate('/dashboard')
+
                 } catch (error) {
                     console.log(error)
+
+                }finally{
+                    setLoading(false)
                 }
             })()
         }
-    }, [])
+    }, [user])
 
     const logoutUser = () => {
-
-        toast.success("Logout efetuado, estamos redirecionando ao login.")
         setLoading(true)
+        toast.success("Logout efetuado, estamos redirecionando ao login.")
         setUser(false)
         window.localStorage.clear()
-        setTimeout(() => {
-            navigate('/login')
-            setLoading(false)
-        }, (4000));
+        setLoading(false)
+        navigate('/login')
     }
 
     if(loading){
         return <LoaderDash/>;
     }
-    
+
     return(
         <UserContext.Provider value={{token, user, setUser, userPersist, setUserPersist, submitLogin, logoutUser, loading, setLoading}}>
             {children}

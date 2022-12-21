@@ -10,7 +10,6 @@ import { FontLabelInput, FontRegular1, TextError, TitleBold1 } from "../../../st
 import { StyledForm } from "./styles";
 
 export const FormLogin = () => {
-    
     const { submitLogin } = useContext(UserContext)
     const { register, handleSubmit, formState: { errors } } = useForm<iFormLogin>({
         mode: "onBlur",
@@ -25,27 +24,31 @@ export const FormLogin = () => {
                 </TitleBold1>
             </div>
             <StyledForm noValidate onSubmit={handleSubmit(submitLogin)}>
-
                 <fieldset className="animate__animated animate__fadeInRight animate__slow">
                     <FontLabelInput>
-                        Nome
+                        Email
                     </FontLabelInput>
-                    <input id="email" placeholder='Insira seu email'        type="text" {...register("email")} autoComplete="off" required/>
+                    <input id="email" placeholder='Insira seu email' type="text"
+                        {...register("email")}
+                        autoComplete="off"
+                        required
+                    />
                     {errors.email && <TextError>{errors.email.message}</TextError>}
                 </fieldset>
-
                 <fieldset className="animate__animated animate__fadeInRight animate__slower">
                     <FontLabelInput>
                         Senha
                     </FontLabelInput>
-                    <input id="password" placeholder='Insira sua senha' type="password" {...register("password")} autoComplete="off" required />
+                    <input id="password" placeholder='Insira sua senha'
+                        type="password"
+                        {...register("password")}
+                        autoComplete="off"
+                        required
+                    />
                     {errors.password && <TextError>{errors.password.message}</TextError>}
                 </fieldset>
-
                 <ButtonLogin type="submit">Logar</ButtonLogin>
-                
             </StyledForm>
-
             <FontRegular1>
                 Crie sua conta para saborear muitas delícias e matar sua fome!
             </FontRegular1>
