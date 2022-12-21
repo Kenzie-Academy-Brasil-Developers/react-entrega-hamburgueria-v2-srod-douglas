@@ -74,4 +74,13 @@ export const GlobalStyle = createGlobalStyle`
         transition: 1s;
         cursor: pointer;
     }
+
+    @media(max-width: 768px){
+        body{
+/*             max-width: 100%;
+            max-height: 100%; */
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
 `

@@ -57,6 +57,8 @@ export const StyledMainRegisterPage = styled.main`
         letter-spacing: .2rem;
     }
 
+    }
+    
     @media(max-width: 768px){
 
         width: 100%;
@@ -71,8 +73,15 @@ export const StyledMainRegisterPage = styled.main`
         img:nth-child(2){
             display: block;
             margin-bottom: -4rem;
-            padding: 0 1rem;
+            padding: 0;
+        }
+
+        section:nth-child(1){
+            width: 100%;
+        }
+
+        section:nth-child(2){
+            width: 100%;
         }
     }
-}
 `
