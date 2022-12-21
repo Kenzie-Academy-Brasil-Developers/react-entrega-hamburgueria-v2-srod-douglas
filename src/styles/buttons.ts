@@ -29,6 +29,10 @@ export const ButtonLogin = styled.button`
 `
 
 export const LinkRegister = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     max-width: 452px;
     width: 100%;
     height: 60px;

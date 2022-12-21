@@ -75,11 +75,7 @@ export const StyledFormRegister = styled.form`
 
         & ::placeholder{
             background-color: var(--color-grey-600);
-            color: var(--color-grey-0);
+            color: var(--color-grey-600);
         }        
-
-        &:invalid:required{
-                border: 1px solid var(--color-negative);
-        }
     }
 `
