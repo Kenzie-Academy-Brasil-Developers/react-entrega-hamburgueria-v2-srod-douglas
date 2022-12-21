@@ -64,7 +64,7 @@ export const Modal = () => {
                             )}
                         </ul>
                     </main>
-                <div>
+                <div className='total'>
                             <h2>Total</h2>
                             <h2>{totalCart}</h2>
                 </div>

@@ -4,11 +4,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { iFormLogin } from "./types";
 import { useContext } from "react";
 import { UserContext } from "../../../contexts/User";
-import { ButtonLogin, ButtonRegister } from "../../../styles/buttons";
+import { ButtonLogin, LinkRegister } from "../../../styles/buttons";
 import { FontLabelInput, FontRegular1, TextError, TitleBold1 } from "../../../styles/typography";
 
 import { StyledForm } from "./styles";
-import { Link } from "react-router-dom";
 
 export const FormLogin = () => {
     
@@ -50,11 +49,12 @@ export const FormLogin = () => {
             <FontRegular1>
                 Crie sua conta para saborear muitas delícias e matar sua fome!
             </FontRegular1>
-            <Link to="/register">
-                <ButtonRegister>
+            <LinkRegister to="/register">
+                Cadastrar
+{/*                 <ButtonRegister>
                     Cadastrar
-                </ButtonRegister>
-            </Link>
+                </ButtonRegister> */}
+            </LinkRegister>
         </>
     )
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import img from "../../assets/images/brandCodeLogoCrop-removebg.png"
 export const ContainerModal = styled.div`
     width: 100vw;
     height: 100vh;
@@ -17,8 +17,8 @@ export const ContainerModal = styled.div`
 `
 
 export const BodyModal = styled.div`
-    width: 400px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
 
     display: flex;
     flex-direction: column;
@@ -28,6 +28,30 @@ export const BodyModal = styled.div`
     margin-top: 5%;
 
     background-color: var(--color-grey-0);
+    border: 1px solid var(--color-grey-0);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 0px;
+
+    img, svg, path{
+        cursor: pointer;
+    }
+    .total{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+        padding: 1rem;
+        border-top: 2px solid var(--color-grey-0);
+        box-shadow: rgba(0, 0, 0, 0.75) 0px -36px 50px -21px;
+
+    }
+
+    div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     header{
         display: flex;
@@ -39,12 +63,37 @@ export const BodyModal = styled.div`
         width: 100%;
         height: 100px;
         background-color: var(--color-secundary);
+
+        border: 1px solid var(--color-secundary);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 1rem;
+
+        & > div {
+            width: 30px;
+            height: 30px;
+
+            & > svg {
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                transition: .5s;
+
+                :hover {
+                    color: var(--color-negative);
+            }
+            }
+        }
     }
 
     main{
-        overflow-y: scroll;
+        overflow-y: auto;
+        scroll-behavior: smooth;
         height: 600px;
         max-width: 600px;
+        background-image: url(${img});
+        background-repeat: repeat;
+        background-attachment: fixed;
     }
 
     main > div:nth-child(1){
@@ -59,27 +108,94 @@ export const BodyModal = styled.div`
         flex-direction: column;
         width: 100%;
         gap: 20px;
-        background-color: var(--color-success);
+        margin-top: .8rem;
+        padding-bottom: -1rem;
+        padding: 0 .6rem;
+        box-shadow: rgba(0, 0, 1, 0.9) 0px 10px 29px 20px;
     }
 
     main > ul > li{
         width: 100%;
-        height: 80px;
+        height: 120px;
         display: flex;
         justify-content: space-between;
         padding: 1rem;
         gap: 20px;
-        background-color: rgba(44, 44, 44, .9);
+        background-color: rgba(44, 44, 44, 1);
+        box-shadow: rgba(0, 0, 1, 0.8) 0px 10px 29px 20px;
+        border-radius: 8px;
 
         & > div {
-            display: flex;
-            height: 100px;
-            width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                gap:1rem;
+
+            & > div:nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 8px;
+                    background-color: var(--color-secundary);
+
+                    & > img {
+                        object-fit: cover;
+                    }
+            }
+
+            & > div:nth-child(2){
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 100%;
+                    width: 100%;
+
+
+/*                     & > h2 {
+                    } */
+                & > fieldset {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 30%;
+                    height: 50%;
+
+                        & > div:nth-child(2) > span{
+                                font-size: 2rem;
+                                color: var(--color-grey-600);
+                        }
+                }
+
+
+                & > fieldset > div:nth-child(odd){
+                    height: 30px;
+                    width: 30px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-radius: 6px;
+                    background-color: var(--color-secundary);
+                    box-shadow: rgba(0, 0, 1, 0.6) 0px 7px 29px 0px;
+                    cursor: pointer;
+                }
+            }
         }
     }
 
     img{
-        width: 50px;
+        object-fit: cover;
+        width: 70px;
+    }
+
+    button{
+        margin-top: -2rem;
+        margin-bottom: 1.5rem;
     }
 
     fieldset{
