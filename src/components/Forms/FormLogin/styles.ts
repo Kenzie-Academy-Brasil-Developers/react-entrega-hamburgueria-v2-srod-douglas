@@ -19,7 +19,6 @@ export const StyledForm = styled.form`
     input:-webkit-autofill:focus{
         border: 1px solid white;
         -webkit-text-fill-color: white !important;
-/*         -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
         transition: background-color 5000s ease-in-out 0s;
     }
 
@@ -45,7 +44,7 @@ export const StyledForm = styled.form`
             
             color: var(--color-grey-600);
             background-color: var(--color-grey-0);
-            box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
+            box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 10px;
             
             outline: none;
 

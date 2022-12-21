@@ -19,7 +19,9 @@ export const CartProvider = ({ children }: iCartProviderProps) => {
       )
 
       const addToCart = (product: iDataProducts) => {
+
         const clone = [...dataProducts]
+
         if(clone !== undefined){
           const newCart = [...cart, {...product}]
           setCart(newCart)

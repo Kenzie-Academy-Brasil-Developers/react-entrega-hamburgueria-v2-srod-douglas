@@ -53,6 +53,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
         width: 100%;
         height: 100%;
+        
         background-image: url('/backgrounddark.png');
         background-repeat: repeat;
         background-size: auto;
@@ -77,8 +78,6 @@ export const GlobalStyle = createGlobalStyle`
 
     @media(max-width: 768px){
         body{
-/*             max-width: 100%;
-            max-height: 100%; */
             background-size: cover;
             background-repeat: no-repeat;
         }

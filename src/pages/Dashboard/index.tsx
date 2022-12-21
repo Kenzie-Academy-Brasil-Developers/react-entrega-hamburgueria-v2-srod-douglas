@@ -8,7 +8,6 @@ import 'animate.css'
 
 export const DashboardPage = () => {
     const { user, userPersist } = useContext(UserContext);
-
     if(!user && !userPersist){
         return <Navigate to='/login'/>
     };

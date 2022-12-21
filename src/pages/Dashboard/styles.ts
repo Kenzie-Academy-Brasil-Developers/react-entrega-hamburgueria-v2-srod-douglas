@@ -10,7 +10,9 @@ export const StyledMainDashboard = styled.main`
     section{
         width: 100%;
         max-width: 1200px;
+
         display: flex;
+
         margin: 0 auto;
         margin-top: 2rem;
     }
@@ -19,17 +21,23 @@ export const StyledMainDashboard = styled.main`
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
         gap: 2rem;
     }
 
     li{
         display: flex;
         flex-direction: column;
+
         width: 280px;
         height: 350px;
+
         border: .5px solid var(--color-grey-0);
         border-radius: 8px;
+
         transition: .5s;
+
+        box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 10px;
 
         :hover{
             border: 1px solid var(--color-secundary);
@@ -66,6 +74,7 @@ export const StyledMainDashboard = styled.main`
         justify-content: center;
 
         height: 180px;
+
         background-color: rgba(255, 165, 0, .2);
 
         border-top-left-radius: 8px;
@@ -93,7 +102,6 @@ export const StyledMainDashboard = styled.main`
     }
 
     @media(max-width: 767px){
-
         max-width: 100%;
         padding: 0;
 
@@ -106,7 +114,9 @@ export const StyledMainDashboard = styled.main`
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: flex-start;
+
             overflow-x: auto;
+
             height: 450px;
             min-width: 100%;
             gap: 1rem;
@@ -115,6 +125,7 @@ export const StyledMainDashboard = styled.main`
             min-width: 250px;
             max-width: 350px;
             min-height: 380px;
+            
             margin: 0 .5rem 0 .5rem;
         }
     }

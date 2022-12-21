@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import { idataProducts } from '../../contexts/Dashboard/types'
 import { ButtonAddToCart } from '../../styles/buttons'
-import { FontPrice, FontRegular2, FontRegular3, TitleBold2, TitleBold3 } from '../../styles/typography'
+import { FontPrice, FontRegular2, TitleBold2 } from '../../styles/typography'
 import { iCardProps } from './types'
 import 'animate.css'
 

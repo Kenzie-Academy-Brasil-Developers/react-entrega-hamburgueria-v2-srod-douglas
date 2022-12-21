@@ -13,7 +13,9 @@ export const StyledFormRegister = styled.form`
     p {
         display: block;
         width: 100%;
+
         color: var(--color-negative);
+        
         font-weight: var(--weight-semibold);
     }
 
@@ -25,17 +27,21 @@ export const StyledFormRegister = styled.form`
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: 110px;
+
         border: none;
         margin-top: -1rem;
 
         & p {
             display: block;
             width: 100%;
-            color: var(--color-negative);
-            font-weight: var(--weight-semibold);
             margin-top: .3rem;
+
+            color: var(--color-negative);
+
+            font-weight: var(--weight-semibold);
         }
 
         & label{
@@ -56,22 +62,25 @@ export const StyledFormRegister = styled.form`
             font-weight: var(--weight-regular);
             
             outline: none;
-            box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
+            box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 10px;
         }
     }
 
     input {
         width: 100%;
         height: 60px;
-        background-color: var(--color-grey-0);
+        padding: 15px 20px;
         border: none;
         border-radius: 8px;
-        padding: 15px 20px;
+
+        color: var(--color-grey-600);
+        background-color: var(--color-grey-0);
+        box-shadow: rgba(0, 0, 1, 0.8) 0px 7px 29px 10px;
+
         font-size: var(--font-regular-1);
         font-weight: var(--weight-regular);
+
         outline: none;
-        color: var(--color-grey-600);
-        box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
 
         & ::placeholder{
             background-color: var(--color-grey-600);
