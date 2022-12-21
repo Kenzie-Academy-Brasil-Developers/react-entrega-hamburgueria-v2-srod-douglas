@@ -51,9 +51,6 @@ export const FormLogin = () => {
             </FontRegular1>
             <LinkRegister to="/register">
                 Cadastrar
-{/*                 <ButtonRegister>
-                    Cadastrar
-                </ButtonRegister> */}
             </LinkRegister>
         </>
     )

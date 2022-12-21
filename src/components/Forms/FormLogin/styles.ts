@@ -19,7 +19,7 @@ export const StyledForm = styled.form`
     input:-webkit-autofill:focus{
         border: 1px solid white;
         -webkit-text-fill-color: white !important;
-        -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+/*         -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
         transition: background-color 5000s ease-in-out 0s;
     }
 
@@ -43,21 +43,18 @@ export const StyledForm = styled.form`
             font-size: var(--font-regular-1);
             font-weight: var(--weight-regular);
             
-            color: var(--color-grey-0);
-            background-color: var(--color-grey-600);
+            color: var(--color-grey-600);
+            background-color: var(--color-grey-0);
             box-shadow: rgba(0, 0, 1, 0.4) 0px 7px 29px 0px;
             
             outline: none;
 
             & ::placeholder{
-                background-color: var(--color-grey-600);
+                background-color: var(--color-grey-0);
                 color: var(--color-grey-0);
             }
             &:enabled{
-                background-color: var(--color-grey-600);
-            }
-            &:invalid:required{
-                border: 1px solid var(--color-negative);
+                background-color: var(--color-grey-0);
             }
         }
     }
