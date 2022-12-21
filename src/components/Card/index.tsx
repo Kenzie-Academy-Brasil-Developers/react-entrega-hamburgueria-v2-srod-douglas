@@ -4,6 +4,7 @@ import { idataProducts } from '../../contexts/Dashboard/types'
 import { ButtonAddToCart } from '../../styles/buttons'
 import { FontPrice, FontRegular2, FontRegular3, TitleBold2, TitleBold3 } from '../../styles/typography'
 import { iCardProps } from './types'
+import 'animate.css'
 
 export const Card = ({ products }: iCardProps) => {
   const { addToCart } = useContext(CartContext)
@@ -11,7 +12,7 @@ export const Card = ({ products }: iCardProps) => {
   return(
     <>
       {products !== undefined && products !== null && products.map((product: idataProducts) => (
-          <li key={product.id}>
+          <li key={product.id} className="animate__animated animate__fadeIn animate__slower">
             <div>
               <img src={product.img} />
             </div>

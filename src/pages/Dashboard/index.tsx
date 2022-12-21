@@ -4,6 +4,7 @@ import { HeaderDashboard } from "../../components/Header"
 import { ListCards } from "../../components/ListCards"
 import { UserContext } from "../../contexts/User";
 import { StyledMainDashboard } from "./styles";
+import 'animate.css'
 
 export const DashboardPage = () => {
     const { user, userPersist } = useContext(UserContext);
@@ -13,7 +14,7 @@ export const DashboardPage = () => {
     };
 
     return(
-        <div>
+        <div className="animate__animated animate__fadeIn animate__slower">
             <HeaderDashboard />
             <StyledMainDashboard className="animate__animated animate__slideInRight animate__slower">
                 <section>
